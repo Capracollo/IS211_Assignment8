@@ -38,10 +38,10 @@ class TimedGameProxy:
                     if (end_time - start_time) < 60:
                         self.p2.move()
                     else:
-                        print("60 Seconds Time over")
+                        print("60 Seconds passed, Timed out!")
                         break
             else:
-                print("60 Seconds Time over")
+                print("60 Seconds passed, Timed out")
                 break
         if self.p1.score > self.p2.score:
             print(f'{self.p1.name} wins!')
@@ -116,13 +116,15 @@ class Dice:
 class Factory:
     def __init__(self):
         print(
-            'Select an option:\nSelect 1 for two human players\nSelect 2 for VS Computer\nSelect 3 for two Computer player (1/2/3): ')
+            'Select an option:\nSelect 1 for two human players'
+            '\nSelect 2 for VS Computer\nSelect 3 for two Computer player (1/2/3): ')
         try:
             option = int(input())
             while option not in [1, 2]:
                 print("Invalid input")
                 print(
-                    'Select an option:\nSelect 1 for two human players\nSelect 2 for VS Computer\nSelect 3 for two Computer players (1/2/3): ')
+                    'Select an option:\nSelect 1 for two human players'
+                    '\nSelect 2 for VS Computer\nSelect 3 for two Computer players (1/2/3): ')
                 option = int(input())
             if option == 1:
                 self.p1 = Player("Player1")
