@@ -143,6 +143,4 @@ if __name__ == "__main__":
     print('welcome to Pig game!')
     game = Game()
     game.play()
-    print()
-    print()
     print('Bye')
